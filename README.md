@@ -1,27 +1,89 @@
-# AngularAuthFront
+# Projeto Auth-Front com Angular utilizando JWT
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+Este é um projeto de front-end desenvolvido em Angular que implementa um sistema de autenticação usando JSON Web Tokens (JWT).
 
-## Development server
+## Requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Certifique-se de ter as seguintes ferramentas instaladas em seu ambiente de desenvolvimento:
 
-## Code scaffolding
+- Node.js: https://nodejs.org
+- Angular CLI: Execute `npm install -g @angular/cli` para instalar o Angular CLI globalmente.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Configuração do Projeto
 
-## Build
+Siga as etapas abaixo para configurar o projeto em sua máquina local:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone o repositório do projeto:
 
-## Running unit tests
+   ```
+   git clone <URL_DO_REPOSITORIO>
+   ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Acesse o diretório do projeto:
 
-## Running end-to-end tests
+   ```
+   cd auth-front
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Instale as dependências do projeto:
 
-## Further help
+   ```
+   npm install
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+4. Configure as informações de autenticação:
+
+   - Abra o arquivo `src/environments/environment.ts`.
+   - Preencha a propriedade `apiUrl` com a URL da API de autenticação.
+
+## Executando o Projeto
+
+Para executar o projeto localmente, siga as etapas abaixo:
+
+1. No diretório do projeto, execute o seguinte comando:
+
+   ```
+   ng serve
+   ```
+
+2. Abra seu navegador e acesse `http://localhost:4200` para visualizar o projeto em execução.
+
+## Funcionalidades
+
+O projeto Auth-Front com Angular oferece as seguintes funcionalidades:
+
+- Registro de usuário: permite que novos usuários se registrem fornecendo um nome de usuário e senha.
+- Login de usuário: permite que os usuários existentes façam login usando suas credenciais.
+- Autenticação com JWT: após o login bem-sucedido, o sistema gera um token JWT que é armazenado no armazenamento local do navegador. O token é enviado com todas as solicitações subsequentes para autenticação do usuário.
+- Proteção de rotas: certas rotas são protegidas e só podem ser acessadas por usuários autenticados. Se um usuário não autenticado tentar acessar uma rota protegida, ele será redirecionado para a página de login.
+
+## Contribuindo
+
+Se você quiser contribuir para este projeto, siga as etapas abaixo:
+
+1. Faça um fork do repositório.
+2. Crie uma nova branch:
+
+   ```
+   git checkout -b minha-nova-feature
+   ```
+
+3. Faça suas modificações e adicione seus commits:
+
+   ```
+   git commit -m "Minha nova feature"
+   ```
+
+4. Envie suas alterações para o repositório remoto:
+
+   ```
+   git push origin minha-nova-feature
+   ```
+
+5. Abra um pull request no repositório original.
+
+## Considerações Finais
+
+Este projeto é um exemplo básico de implementação de autenticação usando JWT no front-end com Angular. Sinta-se à vontade para explorar o código-fonte e personalizá-lo de acordo com suas necessidades.
+
+Se você tiver alguma dúvida ou problema, sinta-se à vontade para abrir uma issue no repositório. Esperamos que este projeto seja útil para você e facilite o desenvolvimento de sistemas de autenticação com Angular e JWT.
